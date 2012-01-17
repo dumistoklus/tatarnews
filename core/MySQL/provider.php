@@ -3,9 +3,9 @@
  * http://192.168.0.85/pma
  */
 
-$username = "tatarnews.ru";
-$password = "817azfJiA";
-$host = '10.1.1.4';
+$username = "root";
+$password = "876abRGA";
+$host = '192.168.0.85';
 $db_name = "tatarnews.ru";
 define("PREFIX", "fms_");
 
