@@ -1,0 +1,6 @@
+RewriteEngine	on
+RewriteBase	/
+RewriteCond	%{QUERY_STRING} ^page=([0-9])&article=(.*)$
+RewriteRule	^(.*)$ ?page=articles&article_id=%2 [L,R=301]
+RewriteCond     %{QUERY_STRING} ^page=([0-9])&id=(.*)$
+RewriteRule     ^(.*)$ ?page=articles&article_id=%2 [L,R=301]

@@ -1,0 +1,70 @@
+* html #wrapper,
+* html #footerwarp {
+	width: expression(
+	(document.compatMode && document.compatMode == 'CSS1Compat') ?
+	(document.documentElement.clientWidth < 980 ? "980px" :
+	(document.documentElement.clientWidth > 1100 ? "1100px" : "auto")) :
+	(document.body.clientWidth > 980 ? "980px" :
+	(document.body.clientWidth < 1100 ? "1100px" : "auto")));
+}
+#search-field {
+	margin-right: -3px;
+	margin-top:-1px;
+}
+/* ie 5-6 */
+* html .cf {
+	height: 1%;
+	margin-bottom: -3px;
+}
+.article-big-image {
+	overflow:hidden;
+	width: 100%;
+	position:relative;
+	float: left;
+}
+.zagol-line {
+	height: 18px;
+}
+#sobitie .zagol-line {
+	font-size: 0;
+}
+#popup-warp {
+	position: absolute;
+}
+#overlay {
+	position: absolute;
+	filter: alpha(opacity=50);
+}
+.popup-fix {
+	display:inline;
+}
+.company-name {
+	display:inline-block;
+}
+.comment-answer-form textarea, .poll-lines, .comment-footer {
+	width:98%;
+}
+.comment-footer {
+	position: relative;
+}
+.comment-rating {
+	right: 0;
+	position: absolute;
+}
+.rating-rate {
+	display:inline;
+	background-color:#FFF;
+}
+.comment-answer-form textarea {
+	width: 550px !important;
+}
+.article-dislike, .article-like {
+	line-height: 32px;
+}
+#sideRight .short-news-date {
+	clear: both;
+}
+#cabinet dd {
+	disply: block;
+	margin-left: 220px;
+}

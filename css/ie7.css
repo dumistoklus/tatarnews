@@ -1,0 +1,29 @@
+#search-field{margin-top:-1px;}
+#overlay {filter: alpha(opacity=50);}
+.company-name {
+	display:inline-block;
+}
+#comments {
+	position: relative;
+}
+.comment-footer {
+	position: relative;
+}
+.comment-rating {
+	float:none;
+	right: 0;
+	position: absolute;
+	background-color: #fff; /* not remove */
+}
+.comment-dislike, .comment-like {
+	margin:3px 0;
+}
+*+html .cf {
+	display: inline-block; /* IE7not8 */
+}
+.article-dislike, .article-like {
+	line-height: 32px;
+}
+.article-like-num {
+	margin-top: 4px;
+}
