@@ -40,6 +40,10 @@ class Banner implements IPlugin
         {
             return FooterBanner::load($order);
         }
+        else if ($side == Side::LEFT)
+        {
+            return LeftBanner::load($order);
+        }
     }
 }
 
@@ -138,6 +142,15 @@ class FooterBanner
 {
     public static function load($order) {
         return '<div class="brbrbr-rast">'.BannerDataLoader::init()->get_banner(Side::BOTTOM, $order).'</div>';
+    }
+}
+
+class LeftBanner
+{
+    public static function load($order) {
+        return '<div class="brbrbr-in-right-block">'.
+                    BannerDataLoader::init()->get_banner(Side::RIGHT, $order).
+                '</div>';
     }
 }
 
