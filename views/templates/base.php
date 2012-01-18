@@ -22,6 +22,8 @@
 			<div class="sidebar" id="sideRight">
 				<?php echo $body->right(); ?>
 			</div>
+
+            <div><?php echo $body->left() ?></div>
 			<!-- .sidebar#sideRight -->
 		</div>
 		<!-- #middle-->

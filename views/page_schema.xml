@@ -3,6 +3,6 @@
   <region side="header">H</region>
   <region side="right">R</region>
   <region side="center">C</region>
-  <region side="left" visible="false">L</region>
+  <region side="left">L</region>
   <region side="bottom">B</region>
 </page>
