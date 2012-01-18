@@ -48,30 +48,20 @@ h2 {
 	height: 1%;
 	/*position: relative;*/
 }
-#middle:after {
-	content: '.';
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}
 #container {
-	width: 100%;
-	float: left;
-	overflow: hidden;
-}
-#content {
-	padding: 0 325px 0 0;
+    vertical-align: top;
 }
 /* Sidebar Right
 -----------------------------------------------------------------------------*/
 #sideRight {
-	float: left;
 	margin-right: -3px;
-	width: 310px;
-	margin-left: -310px;
-	position: relative;
-	overflow:hidden;
+	width: 240px;
+    vertical-align: top;
+}
+#sideLeft {
+    padding-right: 20px;
+    width: 240px;
+    vertical-align: top;
 }
 /* ############################################################################################### */ 
 /* MAIN STYLE */

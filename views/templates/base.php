@@ -12,19 +12,13 @@
 		</div>
 		<!-- #header-->
 		<div id="middle">
-			<div id="container">
-				<div id="content">
-					<?php echo $body->center(); ?>
-				</div>
-				<!-- #content-->
-			</div>
-			<!-- #container-->
-			<div class="sidebar" id="sideRight">
-				<?php echo $body->right(); ?>
-			</div>
-
-            <div><?php echo $body->left() ?></div>
-			<!-- .sidebar#sideRight -->
+			<table>
+                <tr>
+                    <td id="container"><?php echo $body->center(); ?></td>
+                    <td id="sideLeft"><?php echo $body->left(); ?></td>
+                    <td id="sideRight"><?php echo $body->right(); ?></td>
+                </tr>
+            </table>
 		</div>
 		<!-- #middle-->
 		<div id="footerwarp">
