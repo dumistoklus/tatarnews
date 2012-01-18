@@ -148,7 +148,7 @@ class BodyViewData {
 	private function init_side_plugins($side) {
 		$plugins_output = '';
 		$plugins_array = $this->plugins_controller->get_side($side);
-		
+
 		if(is_array($plugins_array)) {
 			foreach ($plugins_array as $order => $plugin) {
                 if(class_exists($plugin))

@@ -611,7 +611,6 @@ class BannerController {
     }
 
     private function check_side_position_template_id( $side, $order, $template_id ) {
-
         $side = (int)$side;
         $order = (int)$order;
         $template_id = (int)$template_id;
