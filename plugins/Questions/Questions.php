@@ -78,7 +78,7 @@ class Questions implements IPlugin {
         } else if ($side == Side::RIGHT) {
 
             return QuestionView::print_view(new QuestionList(false, 0,5));
-        }
+        } 
     }
 
 }
