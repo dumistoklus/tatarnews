@@ -75,8 +75,8 @@ class Questions implements IPlugin {
             $navbar = new PageNavBar($currentURI, $questionList->count(), $currentpage);
 
             return QuestionView::print_view_all($questionList) . $navbar->get();
-        } else if ($side == Side::RIGHT) {
-
+        } else
+        {
             return QuestionView::print_view(new QuestionList(false, 0,5));
         } 
     }

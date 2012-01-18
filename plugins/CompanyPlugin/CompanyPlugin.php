@@ -82,7 +82,7 @@ class CompanyPlugin implements IPlugin {
             $navbar = new PageNavBar($currentURI, $company->count(), $currentpage);
 
             return CompanyView::print_view_all($company) . $navbar->get();
-        } else if ($side == Side::RIGHT) {
+        } else if ($side == Side::RIGHT || $side == Side::LEFT) {
 
             return CompanyView::print_view(new Company());
         }
