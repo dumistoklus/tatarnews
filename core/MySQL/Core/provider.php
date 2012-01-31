@@ -65,20 +65,20 @@ class PageProvider {
 
 				
 	}
-	
-	private function getPageByName($name) {
-            if(!is_object($name))
-            {
-		if ($this->isValidName($name)) {
-		$name = mysql_real_escape_string(strip_tags($name));
 
-		$sql = "SELECT * FROM ".PREFIX."pages WHERE name='$name' LIMIT 1";
+    private function getPageByName($name) {
+        if(!is_object($name))
+        {
+            if ($this->isValidName($name)) {
+                $name = mysql_real_escape_string(strip_tags($name));
 
-		return $this->initPage($sql);
-                }
+                $sql = "SELECT * FROM ".PREFIX."pages WHERE name='$name' LIMIT 1";
+
+                return $this->initPage($sql);
             }
-                return $this->unknown_page_data;
-	}
+        }
+        return $this->unknown_page_data;
+    }
 	
 	public function createPage($name) {
             if(!is_object($name))

@@ -148,8 +148,9 @@ class FooterBanner
 class LeftBanner
 {
     public static function load($order) {
+
         return '<div class="brbrbr-in-right-block">'.
-                    BannerDataLoader::init()->get_banner(Side::RIGHT, $order).
+                    BannerDataLoader::init()->get_banner(Side::LEFT, $order).
                 '</div>';
     }
 }

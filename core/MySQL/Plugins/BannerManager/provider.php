@@ -12,7 +12,6 @@ class BannerManagerProvider {
     public function get_templates_list() {
         $banners = get_bd_data('SELECT `template_id`, `date_start`, `date_end`, `html`, `template_name` FROM `'.PREFIX.'banner_templates` '.
                                ' ORDER BY `date_start` DESC');
-
         return $banners;
     }
 
