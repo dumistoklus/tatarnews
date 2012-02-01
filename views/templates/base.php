@@ -12,7 +12,7 @@
 		</div>
 		<!-- #header-->
 		<div id="middle">
-			<table>
+			<table style="width: 100%;">
                 <tr>
                     <td id="container"><?php echo $body->center(); ?></td>
                     <td id="sideLeft"><?php echo $body->left(); ?></td>
