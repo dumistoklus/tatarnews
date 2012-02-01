@@ -210,7 +210,6 @@ class CommentsAjax {
 
         return $newcomment;
     }
-
 }
 
 class CommentsRatingAjax {

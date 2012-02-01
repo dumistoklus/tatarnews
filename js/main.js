@@ -59,7 +59,7 @@ $(document).ready(function(){
         if (!$(this).data('clicked')){
             if (!$(this).data('clicked',true).parent().parent().data('clicable')){
                 var id = $(this).parent().parent().attr('id');
-                $(this).parent().after('<div class="comment-answer-form"><form action="/articles/5/?new_comment" method="post" class="comment-form"><div><input name="name" value="Ваше имя"><br/><br/><textarea name="comment" class="comment-answer-textarea" onkeypress="if(event.keyCode==10||(event.ctrlKey && event.keyCode==13))$(this.form).submit();"></textarea></div><input type="submit" value="добавить комментарий" class="comment-answer-submit" /><span class="loader"></span> Ctrl + Enter<input type="hidden" name="answerto" value="'+id+'" /><input type="hidden" name="article_id" value="'+article_id+'" /></form></div>').parent().data('clicable', true).find('textarea').focus();
+                $(this).parent().after('<div class="comment-answer-form"><form action="/articles/5/?new_comment" method="post" class="comment-form"><div><input name="name" value="Ваше имя"><br/><br/><textarea name="comment" class="comment-answer-textarea" onkeypress="if(event.keyCode==10||(event.ctrlKey && event.keyCode==13))$(this.form).submit();"></textarea><input type="hidden" name="email" value=""/></div><input type="submit" value="добавить комментарий" class="comment-answer-submit" /><span class="loader"></span> Ctrl + Enter<input type="hidden" name="answerto" value="'+id+'" /><input type="hidden" name="article_id" value="'+article_id+'" /></form></div>').parent().data('clicable', true).find('textarea').focus();
             } else {
                 $(this).parent().next().show().find('textarea').focus();
             }
@@ -74,6 +74,7 @@ $(document).ready(function(){
         if ($(this).data('commentsent'))
             return false;		
         var text = $(this).find('textarea').val();
+        var email = $(this).find('email').val();
         var name = $(this).find('input[name=name]').val();
         if(name.length == 0) {
             alert('Имя не должно быть пустым');
