@@ -39,19 +39,17 @@ class CommentsPluginProvider {
     public function set_new_comment($dataArray = array()) {
 
 
-        if (isset($dataArray["id_user"]) && isset($dataArray["user_name"]) && isset($dataArray["text"]) &&
-        trim($dataArray["id_user"]) != '' && trim($dataArray["user_name"]) != '' && trim($dataArray["text"]) != '') {
+        if (isset($dataArray["user_name"]) && isset($dataArray["text"]) &&
+        trim($dataArray["user_name"]) != '' && trim($dataArray["text"]) != '') {
 
-            $dataArray["id_user"] = (int)$dataArray["id_user"];
             $dataArray["user_name"] = mysql_real_escape_string($dataArray["user_name"]);
             $dataArray["text"] = mysql_real_escape_string($dataArray["text"]);
             $dataArray["id_parent"] = (int)$dataArray["id_parent"];
 
 
             $sql = 'INSERT INTO ' . PREFIX . 'comments (id_article,
-            id_user, user_name, text, created, id_parent, isdelete)
+            user_name, text, created, id_parent, isdelete)
             VALUES (' . $dataArray["id_article"] . ',
-            "' . $dataArray["id_user"] . '",
             "' . $dataArray["user_name"] . '",
             "' . $dataArray["text"] . '",
             "' . $this->currentTime . '",
