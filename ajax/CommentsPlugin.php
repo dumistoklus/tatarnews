@@ -9,6 +9,8 @@ if (isset($_POST['article_id']))
     $article_id = $_POST['article_id'];
 if (isset($_POST['comment']))
     $comment = $_POST['comment'];
+if (isset($_POST['name']))
+    $name = $_POST['name'];
 if ($answerto == 'comments-warp')
     $answerto = 0;
 else {
@@ -23,8 +25,8 @@ $commentajax = new CommentsAjax($article_id);
 
 $dataArray['id_article'] = $article_id;
 $dataArray['id_parent'] = $answerto;
-$dataArray['id_user'] = User::get()->id();
-$dataArray['user_name'] = User::get()->nickname();
+$dataArray['id_user'] = '0';
+$dataArray['user_name'] = $name;
 $dataArray['text'] = $comment;
 
 $newComment = $commentajax->new_comment($dataArray);
@@ -47,8 +49,8 @@ if ($newComment > 0) {
             <a href="#" class="comment-like"></a>
                 <div class="rating-rate">0</div>
                 <a href="#" class="comment-dislike"></a></div>
-                <a href="/?page=home&user=' . $dataArray['id_user'] . '">
-                    ' . $dataArray['user_name'] . '</a>,
+                
+                    ' . $dataArray['user_name'] . ',
                      ' . date("j", $currentTime) . '&nbsp;'
             . FormatTime::ru_month(date("n", $currentTime)) . '&nbsp;'
             . date("Y , G:i", $currentTime) . '
