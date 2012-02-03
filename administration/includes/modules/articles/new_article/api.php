@@ -59,6 +59,11 @@ function images_list() {
                 'thumb_url' => $dir_thumbs.$thumb);
     }
     $d->close();
+
+    usort($images, function($a, $b) {
+    	return $a['lastmod'] > $b['lastmod'] ? -1 : 1;
+    });
+
     $o = array('images'=>$images);
     return json_encode($o);
 }
