@@ -67,6 +67,12 @@ function filter_string($string)
     return mysql_real_escape_string($string);
 }
 
+function filter_mysql($string)
+{
+    $string = strip_tags($string, '<b><p><a><i><u><strong><div><br><del><s><sub><sup><li><ul><em><style><img><ol><span>');
+    return mysql_real_escape_string($string);
+}
+
 function filter_html_text($string) {
     // $string = filter_var($string, FILTER_SANITIZE_STRING);
     $string = strip_tags($string, '<a><p><ul><li><table><tr><th><td><span><i><b><img><div><hr><font><br><em><strong><s><u>');
