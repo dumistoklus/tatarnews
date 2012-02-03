@@ -8,15 +8,16 @@ class ShortNewsProvider {
     public function get_news_by_limit($limitStart) {
 
         $limitSatrt = (int) $limitStart;
-        if ($limitSatrt == 5)
-            $limit = '0 , 5'; 
-        else
-            $limit = $limitSatrt . ' , 10';
-
-        $sql = 'SELECT * FROM ' . PREFIX . 'short_news ORDER BY `date` DESC LIMIT ' . $limit;
-
-        $this->news = get_bd_data($sql);
-
+        if ($limitSatrt == 5) {
+            $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news ORDER BY `date` DESC LIMIT 5');
+            if (date('dmy', $this->news[0]['date']) == date('dmy', $this->news[4]['date'])) {
+                $time = strtotime(date('d F Y', $this->news[4]['date']));
+                $this->news = array();
+                $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news WHERE `date` > '.  $time.' ORDER BY `date`');
+            };
+        } else {
+            $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news ORDER `date` DESC LIMIT ' . $limitSatrt . ' , 10');
+        }
         return $this->format_news();
     }
 

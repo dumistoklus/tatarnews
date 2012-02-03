@@ -85,23 +85,10 @@ class CommentsView {
 		            $this->print_view_tree().
                 '</div>';
 
-        if (User::get()->isAuth()) {
-
             $resulthtml .= '
                 <div class="new-comment">
                     <a href="#" class="answer-for-comment">Написать комментарий</a>
                 </div>';
-        } else {
-
-            $resulthtml .= '
-                <div class="not-comments">
-                Оставлять комментарии могут только зарегистрированные пользователи.
-                <br />
-                <a href="#" class="login">Войдите</a>
-                или
-                <a href="#" class="registration">зарегистрируйтесь</a>
-                </div>';
-        }
 	    
         $resulthtml .='</div>';
 
@@ -158,11 +145,10 @@ class CommentsView {
                     </div>';
 
                         $this->commentshtml .= '
-                    <a href="/?page=home&user='.$comment["id_user"].'">' . $comment["user_name"] . '</a>,  ' . date("j", $comment["created"]) . '&nbsp;'
+                    ' . $comment["user_name"] . ',  ' . date("j", $comment["created"]) . '&nbsp;'
                             . FormatTime::ru_month(date("n", $comment["created"])) . '&nbsp;'
                             . date("Y , G:i", $comment["created"]);
 
-                    if (User::get()->isAuth())
                         $this->commentshtml .= '
                          <a href="#" class="answer-for-comment">Ответить</a>';
                     if(User::get()->check_rights('DC')) {
@@ -224,7 +210,6 @@ class CommentsAjax {
 
         return $newcomment;
     }
-
 }
 
 class CommentsRatingAjax {

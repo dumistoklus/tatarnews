@@ -78,7 +78,7 @@ class Questions implements IPlugin {
         } else
         {
             return QuestionView::print_view(new QuestionList(false, 0,5));
-        }
+        } 
     }
 
 }

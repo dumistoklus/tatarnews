@@ -1,7 +1,6 @@
 <?php
 
 include 'core/core.php';
-
 DB_Provider::Instance()->loadProvider('Core');
 
 add_file('views/views_core.php', __FILE__);

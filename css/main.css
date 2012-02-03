@@ -57,11 +57,13 @@ h2 {
 	margin-right: -3px;
 	width: 240px;
     vertical-align: top;
+    padding-left:10px;
 }
 #sideLeft {
-    padding-right: 20px;
+    padding-left: 10px;
     width: 240px;
     vertical-align: top;
+    background-color: #ccc;
 }
 /* ############################################################################################### */ 
 /* MAIN STYLE */
@@ -277,6 +279,7 @@ body {
 	line-height: 14px;
 	border-bottom: 1px dashed #bbb;
 }
+
 .zagol-link-warp, .zagol-link-warp-left {
 	padding-top: 6px;	
 	background-color:#FFF;
@@ -290,6 +293,9 @@ body {
 .zagol-link-warp-left {
 	float: left;
 	padding-right: 10px;
+}
+#sideLeft .zagol-link-warp, #sideLeft .zagol-link-warp-left {
+    background-color:#ccc;
 }
 .zagol-link {
 	text-decoration:none;
@@ -1003,13 +1009,16 @@ ul.nolist li {
 .shortnews-content {
 	padding-top: 25px;
 }
-#cabinet dt, #endofregistration dt {
+#cabinet dt, #endofregistration dt, #brbrbr-manager dt {
 	float:left;
 	width: 200px;
 	padding-right:20px;
 	text-align:right;
 }
-#cabinet dl, #endofregistration dl {
+#brbrbr-manager dt {
+    width: 90px;
+}
+#cabinet dl, #endofregistration dl, #brbrbr-manager dl {
 	padding-top:1em;
 }
 .cabinet-myname, .cabinet-birthday, .cabinet-link, .cabinet-about, .cabinet-writer, .cabinet-ilike, .form-bigtitle {
@@ -1140,6 +1149,10 @@ ul.nolist li {
 }
 .cust-page-table td {
 padding:2px;
+}
+
+.author-column {
+    padding-bottom: 30px;
 }
 
 .klinks {

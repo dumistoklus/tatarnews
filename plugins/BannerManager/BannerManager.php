@@ -112,7 +112,7 @@ class BannerManagerView {
 
         $output = $messages.
                   $errors.
-                  '<div id="endofregistration" style="background-color: #ddd; padding-bottom: 20px;">'.$templatesList.'
+                  '<div id="brbrbr-manager" style="background-color: #ddd; padding-bottom: 20px;">'.$templatesList.'
         <form action="/?page=BannerManager" method="post" enctype="multipart/form-data">'.
             '<dl>'.
                 '<dt class="form-title">Название:</dt>'.
