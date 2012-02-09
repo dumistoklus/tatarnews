@@ -5,7 +5,7 @@
 
 $username = "root";
 $password = "876abRGA";
-$host = '192.168.0.85';
+$host = '192.168.0.123';
 $db_name = "tatarnews.ru";
 define("PREFIX", "fms_");
 
