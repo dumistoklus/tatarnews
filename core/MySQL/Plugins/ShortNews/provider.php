@@ -71,7 +71,7 @@ class ManagerShortNewsProvider {
 
     public function __construct() {
 
-        ;
+
     }
 
     public function set_shortNews($short_news) {
@@ -120,7 +120,7 @@ class NewShortNewsProvider extends ManagerShortNewsProvider {
 
             foreach ($this->dataArray as $field => $value) {
 
-                $value = filter_string($value, true);
+                $value = filter_mysql($value, true);
 
                 $fieldsArray[] = $field;
                 $valuesArray[] = '"' . $value . '"';
@@ -159,7 +159,7 @@ class EditShortNewsProvider extends ManagerShortNewsProvider {
 
             foreach ($this->dataArray as $field => $value) {
 
-                $value = filter_string($value, true);
+                $value = filter_mysql($value, true);
 
                 $updateArray[] = $field . '= "' . $value . '"';
             }

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e41adfd5-c4e6-4958-9492-47daa51ee79c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/MySQL/Core/provider.php" afterPath="$PROJECT_DIR$/core/MySQL/Core/provider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/MySQL/Plugins/BannerManager/provider.php" afterPath="$PROJECT_DIR$/core/MySQL/Plugins/BannerManager/provider.php" />
+    <list default="true" id="e41adfd5-c4e6-4958-9492-47daa51ee79c" name="Default" comment="fixes">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/Banner/Banner.php" afterPath="$PROJECT_DIR$/plugins/Banner/Banner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/BannerManager/BannerManager.php" afterPath="$PROJECT_DIR$/plugins/BannerManager/BannerManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/views_core.php" afterPath="$PROJECT_DIR$/views/views_core.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +28,7 @@
       <file leaf-file-name="base.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/templates/base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="61" selection-start="760" selection-end="760" vertical-scroll-proportion="-11.25">
+            <state line="18" column="61" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -41,25 +37,34 @@
       <file leaf-file-name="BannerManager.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/BannerManager/BannerManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="20" selection-start="1003" selection-end="1003" vertical-scroll-proportion="29.88">
+            <state line="38" column="20" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Banner.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Banner.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/Banner/Banner.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="5" selection-start="264" selection-end="264" vertical-scroll-proportion="0.23890784">
+            <state line="21" column="24" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administration/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+            <state line="8" column="8" selection-start="134" selection-end="134" vertical-scroll-proportion="0.13274336">
               <folding />
             </state>
           </provider>
@@ -225,15 +230,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-5" width="1682" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25367647" sideWeight="0.67096776" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25735295" sideWeight="0.67096776" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -242,6 +245,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -300,133 +305,92 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/MySQL/provider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.38163716" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/page_schema.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="21" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/CompanyPlugin/CompanyPlugin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="62" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.7692308">
-          <folding>
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872556000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="84" column="62" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.7692308" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/Questions/Questions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="44" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.33333334">
-          <folding>
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1326872671000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/base.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="61" selection-start="760" selection-end="760" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
+        <state line="101" column="44" selection-start="2832" selection-end="2832" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/MySQL/Plugins/BannerManager/provider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="443" selection-end="443" vertical-scroll-proportion="-0.033670034">
-          <folding />
-        </state>
+        <state line="13" column="62" selection-start="443" selection-end="443" vertical-scroll-proportion="-0.033670034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administration/ajax/menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/Utils/Sides/Format.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/banners/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/MySQL/Core/provider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="21" selection-start="1190" selection-end="1190" vertical-scroll-proportion="-0.75884956">
-          <folding />
-        </state>
+        <state line="53" column="21" selection-start="1190" selection-end="1190" vertical-scroll-proportion="-0.75884956" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="560" column="35" selection-start="13348" selection-end="13348" vertical-scroll-proportion="0.36793542">
-          <folding />
-        </state>
+        <state line="560" column="35" selection-start="13348" selection-end="13348" vertical-scroll-proportion="0.36793542" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/views_core.php">
+    <entry file="file://$PROJECT_DIR$/views/templates/base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+        <state line="18" column="61" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/BannerManager/BannerManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="20" selection-start="1003" selection-end="1003" vertical-scroll-proportion="29.88">
+        <state line="38" column="20" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/views_core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="0" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/Banner/Banner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="264" selection-end="264" vertical-scroll-proportion="0.23890784">
+        <state line="21" column="24" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="134" selection-end="134" vertical-scroll-proportion="0.13274336">
           <folding />
         </state>
       </provider>

@@ -15,7 +15,8 @@
 			<table style="width: 100%;">
                 <tr>
                     <td id="container"><?php echo $body->center(); ?></td>
-                    <td id="sideLeft"><?php echo $body->left(); ?></td>
+                    <?php $leftContent =  $body->left(); ?>
+                    <?php if ($leftContent) { ?><td id="sideLeft"><?php echo $leftContent; ?></td> <?php } ?>
                     <td id="sideRight"><?php echo $body->right(); ?></td>
                 </tr>
             </table>

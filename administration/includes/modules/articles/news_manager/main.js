@@ -52,15 +52,30 @@ EditorWindow = new Ext.Window({
                     xtype: 'textarea',
                     fieldLabel: 'Описание',
                     id: 'NewsPreview',
-                    width: 500,
+                    width: 650,
                     height: 100
                 },
                 {
-                    xtype: 'textarea',
+                    xtype: 'tinymce',
                     fieldLabel: 'Подробно',
                     id: 'NewsText',
-                    width: 500,
-                    height: 400
+                    width: 650,
+                    height: 400,
+                    tinymceSettings:
+                    {
+                        theme: "advanced",
+                        plugins: "style,layer,advimage,advlink,images,insertdatetime,preview,media,searchreplace,contextmenu,paste,directionality,noneditable,visualchars,nonbreaking,xhtmlxtras",
+                        theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,sub,sup,|,justifyleft,justifycenter,justifyright,justifyfull,|,charmap",
+                        theme_advanced_buttons2: "pastetext,pasteword,removeformat,|,search,replace,|,bullist,numlist,|,undo,redo,|,link,unlink,images,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+                        theme_advanced_buttons3: "",
+                        theme_advanced_toolbar_location: "top",
+                        theme_advanced_toolbar_align: "left",
+                        theme_advanced_statusbar_location: "bottom",
+                        theme_advanced_resizing: false,
+         	relative_urls : false,
+         	remove_script_host : true,
+                        extended_valid_elements: "a[name|href|target|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],font[face|size|color|style],span[class|align|style]"
+                    }
                 },
                 {
                     xtype: 'xdatetime',
