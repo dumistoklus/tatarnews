@@ -62,7 +62,6 @@ class ShortNews implements IPlugin
 
             return ShortNewsView::print_compact_news(new ShortNewsList());
         } else if ($side == Side::CENTER){
-
             $list = ShortNewsView::print_news_list(new ShortNewsList());
             return $list;
         }
@@ -102,7 +101,7 @@ class ShortNewsView
 
     public static function print_news_list(ShortNewsList $shortNewsList) {
 
-         HeaderViewData::init()->set_title('Короткие новости - TatarNews.ru');
+        HeaderViewData::init()->set_title('Короткие новости - TatarNews.ru');
 
         if (isset($_GET['a_nav']) && (int)$_GET['a_nav'] != 0) {
             $currentpage = (int)$_GET['a_nav'];

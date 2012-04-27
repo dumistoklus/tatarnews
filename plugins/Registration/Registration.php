@@ -25,7 +25,6 @@ class Registration implements IPlugin {
                 if ( $RegistrationUser->get_register_status() == 'WRONG_NICKNAME' ) {
 
                     $inner = '<div class="warning">Неверно указано имя пользователя. Допустмы только латинские буквы и цифры. Минимальная длина - 2 символа</div>';
-
                 } else if ( $RegistrationUser->get_register_status() == 'NICKNAME_EXISTS' ) {
 
                      $inner = '<div class="warning">Пользователь с таким именем уже существует. Укажите другое имя</div>';
@@ -119,7 +118,6 @@ class RegistrationUser {
     public function __construct() {
 
         if (User::get()->isAuth()) {
-
             $this->register_status = 'ALREADY_REGISTERED';
             return;
         }

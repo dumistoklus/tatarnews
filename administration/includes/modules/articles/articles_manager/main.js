@@ -466,10 +466,8 @@ ArticlesEditorPanel = new Ext.TabPanel({
                 ArticleImage = '';
                 Ext.getCmp('ArticleHeader').setValue("");
                 Ext.getCmp('ArticleLid').setValue("");
-
                 Ext.getCmp('ArticlePreview').setValue("");
                 Ext.getCmp('ArticleContent').setValue("");
-
                 Ext.getCmp('ArticleSource').setValue("");
                 Ext.getCmp('ArticleCat').setValue("");
                 Ext.getCmp('ArticleArchive').setValue("");
@@ -484,11 +482,26 @@ ArticlesEditorPanel = new Ext.TabPanel({
             bodyStyle: 'overflow-y: auto; padding: 15 15',
             items: [
                 {
+                    xtype: 'datefield',
+                    fieldLabel: 'Дата создания',
+                    format: 'Y-m-d',
+                    id: 'ArticleDate',
+                    width: 100
+                },
+                {
+                    xtype: 'timefield',
+                    fieldLabel: 'Время создания',
+                    format: 'H:i',
+                    id: 'ArticleTime',
+                    width: 100
+                },
+                {
                     xtype:'textfield',
                     fieldLabel: 'Название статьи',
                     width: 700,
                     id: 'ArticleHeader'
                 },
+
                 {
                     xtype: 'textarea',
                     fieldLabel: 'Лит',
@@ -701,6 +714,8 @@ ArticlesPanel = new Ext.grid.EditorGridPanel({
 
                 Ext.getCmp('ArticleHeader').setValue(data.data.header);
                 Ext.getCmp('ArticleLid').setValue(data.data.lid);
+                Ext.getCmp('ArticleDate').setValue(data.data.date);
+                Ext.getCmp('ArticleTime').setValue(data.data.time);
 
                 Ext.getCmp('ArticlePreview').setValue(data.data.preview);
                 Ext.getCmp('ArticleContent').setValue(data.data.content);

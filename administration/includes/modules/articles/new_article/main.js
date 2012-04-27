@@ -518,9 +518,9 @@ mainPanel = new Ext.FormPanel({
                  altFormats:'H:i:s'
                 ,allowBlank:true
             }
-            ,dateFormat:'d.n.Y'
+            ,dateFormat:'d.m.Y'
             ,dateConfig: {
-                 altFormats:'Y-m-d|Y-n-d'
+                 altFormats:'Y-m-d|Y-m-d'
                 ,allowBlank:true
             },
             id: 'ArticleDate'

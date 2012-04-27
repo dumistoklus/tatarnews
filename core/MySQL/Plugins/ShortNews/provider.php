@@ -13,10 +13,10 @@ class ShortNewsProvider {
             if (date('dmy', $this->news[0]['date']) == date('dmy', $this->news[4]['date'])) {
                 $time = strtotime(date('d F Y', $this->news[4]['date']));
                 $this->news = array();
-                $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news WHERE `date` > '.  $time.' ORDER BY `date`');
+                $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news WHERE `date` > '.  $time.' ORDER BY `date` DESC');
             };
         } else {
-            $this->news = get_bd_data('SELECT * FROM ' . PREFIX . 'short_news ORDER `date` DESC LIMIT ' . $limitSatrt . ' , 10');
+            $this->news = get_bd_data('SELECT * FROM `' . PREFIX . 'short_news` ORDER BY `date` DESC LIMIT ' . $limitSatrt . ',10');
         }
         return $this->format_news();
     }
