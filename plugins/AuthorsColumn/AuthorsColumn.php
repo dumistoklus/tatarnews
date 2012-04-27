@@ -10,7 +10,7 @@ class AuthorsColumn implements IPlugin
     {
         DB_Provider::Instance()->loadProvider('Plugins.Articles');
 
-        $Provider = new ListOfArticlesByCatProvider(1, 28);
+        $Provider = new ListOfArticlesThirdColProvider(1);
 
         $View = new AuthorsColumnContainerView($Provider->articles());
 

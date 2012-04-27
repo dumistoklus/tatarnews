@@ -135,7 +135,8 @@ ArticlesDataStore = new Ext.data.Store({
         {name: 'create_date', type: 'date', mapping: 'create_date', dateFormat: 'timestamp'},
         {name: 'archive_name', type: 'string', mapping: 'archive_name'},
         {name: 'archive_id', type: 'int', mapping: 'archive_id'},
-        {name: 'main_event', type: 'bool', mapping: 'main_event'}
+        {name: 'main_event', type: 'bool', mapping: 'main_event'},
+        {name: 'third_col', type: 'int', mapping: 'third_col'}
     ])
 });
 
@@ -154,6 +155,7 @@ var SelectedArticleStore = new Ext.data.Store({
         {name: 'id', type: 'int', mapping: 'id'},
         {name: 'header', type: 'string', mapping: 'header'},
         {name: 'lid', type: 'string', mapping: 'lid' },
+        {name: 'create_date', type: 'date', mapping: 'create_date', dateFormat: 'timestamp'},
         {name: 'preview', type: 'string', mapping: 'preview' },
         {name: 'content', type: 'string', mapping: 'content' },
         {name: 'image', type: 'string', mapping: 'image' },
@@ -197,7 +199,13 @@ ArticlesListCM = new Ext.grid.ColumnModel({
 			readOnly: true,
 			dataIndex: 'archive_name',
 			width: 100
-		}
+		},
+        {
+            header: '3 колонка',
+            readOnly: true,
+            dataIndex: 'third_col',
+            width: 100
+        }
 	]
 });
 var CategoryStore = new Ext.data.Store({
@@ -644,6 +652,8 @@ ArticlesEditorPanel = new Ext.TabPanel({
                         header: Ext.getCmp('ArticleHeader').getValue(),
                         lid: Ext.getCmp('ArticleLid').getValue(),
                         preview: Ext.getCmp('ArticlePreview').getValue(),
+                        created_date: Ext.getCmp('ArticleDate').getValue(),
+                        created_time: Ext.getCmp('ArticleTime').getValue(),
                         content: Ext.getCmp('ArticleContent').getValue(),
                         source: Ext.getCmp('ArticleSource').getValue(),
                         cat: Ext.getCmp('ArticleCat').getValue(),
@@ -695,6 +705,12 @@ ArticlesPanel = new Ext.grid.EditorGridPanel({
         iconCls: 'remove',
         text: 'Удалить',
         handler: deleteArticle
+    },
+    {
+        xtype: 'button',
+        iconCls: 'add',
+        text: 'Третья колонка',
+        handler: thirdCol
     }
     ],
     listeners: {
@@ -714,8 +730,8 @@ ArticlesPanel = new Ext.grid.EditorGridPanel({
 
                 Ext.getCmp('ArticleHeader').setValue(data.data.header);
                 Ext.getCmp('ArticleLid').setValue(data.data.lid);
-                Ext.getCmp('ArticleDate').setValue(data.data.date);
-                Ext.getCmp('ArticleTime').setValue(data.data.time);
+                Ext.getCmp('ArticleDate').setValue(data.data.create_date);
+                Ext.getCmp('ArticleTime').setValue(data.data.create_date);
 
                 Ext.getCmp('ArticlePreview').setValue(data.data.preview);
                 Ext.getCmp('ArticleContent').setValue(data.data.content);
@@ -762,10 +778,10 @@ function deleteArticle() {
     var countSelectedArticleItems = ArticlesPanel.selModel.getCount();
 
     if(countSelectedArticleItems == 1) {
-        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранную статью?', confirmRemoveLinkedArticle);
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранную статью?', confirmThirdCol);
     }
     else if(countSelectedArticleItems > 1) {
-        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmRemoveLinkedArticle);
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmThirdCol);
     }
     else {
         Ext.MessageBox.alert('Внимание!', 'Выберите хотя бы одну статью!');
@@ -809,6 +825,65 @@ function removeArticle()
                 });
             else
                 Ext.MessageBox.alert('Ошибка!', 'Ошибка при удалении!');
+        },
+        failure: function (response) {
+            Ext.MessageBox.alert('Ошибка!', 'Сбой подключения, попробуйте позже.');
+        }
+    });
+}
+
+function thirdCol() {
+
+    var countSelectedArticleItems = ArticlesPanel.selModel.getCount();
+
+    if(countSelectedArticleItems == 1) {
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите поместить статью в третью колонку?', confirmThirdCol);
+    }
+    else if(countSelectedArticleItems > 1) {
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmThirdCol);
+    }
+    else {
+        Ext.MessageBox.alert('Внимание!', 'Выберите хотя бы одну статью!');
+    }
+}
+
+function confirmThirdCol(answer) {
+
+    if(answer == 'yes')
+    {
+        setThirdCol();
+    }
+}
+
+function setThirdCol()
+{
+    var selectedArticle = ArticlesPanel.selModel.getSelections(),
+        selectedArticleIDs = [],
+        countSelectedArticle = ArticlesPanel.selModel.getCount();
+
+    for(var i = 0; i < countSelectedArticle; i++) {
+        selectedArticleIDs.push(selectedArticle[i].json.id);
+    }
+
+    selectedArticle = Ext.encode(selectedArticleIDs);
+    Ext.Ajax.request({
+
+        waitingMsg: 'Пожалуйста, подождите...',
+        url: apiURL,
+        params: {
+            task: 'THIRD_COL',
+            article_ids: selectedArticle
+        },
+        success: function (response) {
+            if(response.responseText > 0)
+                ArticlesDataStore.reload({
+                    params: {
+                        start: Ext.getCmp('ArticlesPagingToolbar').cursor,
+                        limit: countOfNumberPerPage
+                    }
+                });
+            else
+                Ext.MessageBox.alert('Ошибка!', 'Ошибка при изменении!');
         },
         failure: function (response) {
             Ext.MessageBox.alert('Ошибка!', 'Сбой подключения, попробуйте позже.');

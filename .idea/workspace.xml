@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e41adfd5-c4e6-4958-9492-47daa51ee79c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php" afterPath="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js" afterPath="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration/includes/modules/articles/new_article/main.js" afterPath="$PROJECT_DIR$/administration/includes/modules/articles/new_article/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/MySQL/Plugins/ShortNews/provider.php" afterPath="$PROJECT_DIR$/core/MySQL/Plugins/ShortNews/provider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/Registration/Registration.php" afterPath="$PROJECT_DIR$/plugins/Registration/Registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/ShortNews/ShortNews.php" afterPath="$PROJECT_DIR$/plugins/ShortNews/ShortNews.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/MySQL/Administration/Articles/provider.php" afterPath="$PROJECT_DIR$/core/MySQL/Administration/Articles/provider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/MySQL/Plugins/Articles/provider.php" afterPath="$PROJECT_DIR$/core/MySQL/Plugins/Articles/provider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/migration.sql" afterPath="$PROJECT_DIR$/migration.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/AuthorsColumn/AuthorsColumn.php" afterPath="$PROJECT_DIR$/plugins/AuthorsColumn/AuthorsColumn.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/index.php">
+      <file leaf-file-name="migration.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/migration.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="6" column="73" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -41,16 +42,37 @@
       <file leaf-file-name="api.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="25" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+            <state line="112" column="45" selection-start="2807" selection-end="2807" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="provider.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AuthorsColumn.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plugins/AuthorsColumn/AuthorsColumn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="62" selection-start="360" selection-end="360" vertical-scroll-proportion="0.26953566">
+              <folding>
+                <marker date="1335535199461" expanded="true" signature="876:1139" placeholder="..." />
+                <marker date="1335535199461" expanded="true" signature="927:1065" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="provider.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/MySQL/Plugins/Articles/provider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="64" selection-start="5231" selection-end="5231" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="provider.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/MySQL/Administration/Articles/provider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="13" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.5078809">
+            <state line="241" column="31" selection-start="6369" selection-end="6369" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -59,25 +81,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="718" column="0" selection-start="28085" selection-end="28085" vertical-scroll-proportion="-18.04">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/new_article/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/person_manager/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="586" column="21" selection-start="13777" selection-end="13777" vertical-scroll-proportion="-25.04">
+            <state line="853" column="19" selection-start="32456" selection-end="32456" vertical-scroll-proportion="-5.12">
               <folding />
             </state>
           </provider>
@@ -98,11 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/page_schema.xml" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/views/templates/base.php" />
-        <option value="$PROJECT_DIR$/plugins/CompanyPlugin/CompanyPlugin.php" />
-        <option value="$PROJECT_DIR$/plugins/Questions/Questions.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/core/MySQL/Plugins/BannerManager/provider.php" />
         <option value="$PROJECT_DIR$/plugins/BannerManager/BannerManager.php" />
@@ -113,7 +112,12 @@
         <option value="$PROJECT_DIR$/core/MySQL/Plugins/ShortNews/provider.php" />
         <option value="$PROJECT_DIR$/plugins/Registration/Registration.php" />
         <option value="$PROJECT_DIR$/administration/includes/modules/articles/new_article/main.js" />
+        <option value="$PROJECT_DIR$/migration.sql" />
         <option value="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js" />
+        <option value="$PROJECT_DIR$/core/MySQL/Administration/Articles/provider.php" />
+        <option value="$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php" />
+        <option value="$PROJECT_DIR$/core/MySQL/Plugins/Articles/provider.php" />
+        <option value="$PROJECT_DIR$/plugins/AuthorsColumn/AuthorsColumn.php" />
       </list>
     </option>
   </component>
@@ -192,6 +196,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AuthorsColumn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="core_plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -225,202 +247,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="person_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new_article" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articles_manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="administration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,10 +289,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1066" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1066" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -540,68 +366,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/Banner/Banner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administration/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/views_core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.4416761">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="16" selection-start="847" selection-end="847" vertical-scroll-proportion="0.019252548">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.15402038">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/ShortNews/ShortNews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="3042" selection-end="3042" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1335513787144" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/MySQL/Plugins/ShortNews/provider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="132" selection-start="815" selection-end="815" vertical-scroll-proportion="0.34654588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/Registration/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="620" selection-end="620" vertical-scroll-proportion="0.48850575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/page_schema.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/MySQL/provider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="9" selection-start="695" selection-end="695" vertical-scroll-proportion="0.33295584">
           <folding />
         </state>
       </provider>
@@ -613,23 +387,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/person_manager/main.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="586" column="21" selection-start="13777" selection-end="13777" vertical-scroll-proportion="-25.04">
+        <state line="82" column="0" selection-start="2457" selection-end="2457" vertical-scroll-proportion="0.33295584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/new_article/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/new_article/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="487" column="53" selection-start="18394" selection-end="18405" vertical-scroll-proportion="-17.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="718" column="0" selection-start="28085" selection-end="28085" vertical-scroll-proportion="-18.04">
+        <state line="487" column="78" selection-start="18418" selection-end="18430" vertical-scroll-proportion="5.0">
           <folding />
         </state>
       </provider>
@@ -641,17 +415,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php">
+    <entry file="file://$PROJECT_DIR$/migration.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="25" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+        <state line="6" column="73" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/person_manager/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="451" column="18" selection-start="10021" selection-end="10024" vertical-scroll-proportion="0.3135198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/comments/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="22" selection-start="2100" selection-end="2104" vertical-scroll-proportion="0.61608154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/cats_manager/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="853" column="19" selection-start="32456" selection-end="32456" vertical-scroll-proportion="-5.12">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/MySQL/Administration/Articles/provider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="13" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.5078809">
+        <state line="241" column="31" selection-start="6369" selection-end="6369" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administration/includes/modules/articles/articles_manager/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="45" selection-start="2807" selection-end="2807" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/MySQL/Plugins/Articles/provider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="64" selection-start="5231" selection-end="5231" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/AuthorsColumn/AuthorsColumn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="62" selection-start="360" selection-end="360" vertical-scroll-proportion="0.26953566">
+          <folding>
+            <marker date="1335535199461" expanded="true" signature="876:1139" placeholder="..." />
+            <marker date="1335535199461" expanded="true" signature="927:1065" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -20,6 +20,9 @@ switch ($task) {
     case 'GET_ARTICLES':
         echo articles_list();
         break;
+    case 'THIRD_COL':
+        third_col();
+        break;
     case 'GET_ARTICLE':
         echo sel_article();
         break;
@@ -56,7 +59,6 @@ function sel_article() {
     if(is_isset_post('articleId'))
     {
         $p = new ArticleContentProvider($_POST['articleId']);
-
         return json_encode(to_ext_datastore_json($p->article()));
     }
 }
@@ -69,6 +71,7 @@ function save_article() {
         $p = new EditArticleProvider($_POST['aid']);
         $p->setArchive($_POST['archive']);
         $p->setCat($_POST['cat']);
+        $p->setDate($_POST['created_date'],$_POST['created_time']);
         $p->setContent($_POST['content']);
         $p->setHeader($_POST['header']);
         $p->setImage($_POST['image']);
@@ -94,5 +97,19 @@ function delete_article() {
         $deleteArticle = new DeleteArticleProvider(json_decode($_POST['article_ids']));
 
         echo $deleteArticle->delete_article();
+    }
+}
+
+function third_col() {
+
+    PluginModule::load('CompanyPlugin');
+
+    if (is_isset_post('article_ids')) {
+
+        DB_Provider::Instance()->loadProvider('Administration.Articles');
+
+        $thirdColArticle = new ThirdColProvider(json_decode($_POST['article_ids']));
+
+        echo $thirdColArticle->setThirdCol();
     }
 }

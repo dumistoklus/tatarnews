@@ -167,6 +167,18 @@ class ListOfArticlesByCatProvider extends ListOfArticlesProvider
     }
 }
 
+class ListOfArticlesThirdColProvider extends ListOfArticlesProvider
+{
+
+    function __construct($page)
+    {
+            $this->sql_appends = 'WHERE art.third_col = "1"';
+            $this->sql_count_appends = ' WHERE third_col = "1"';
+
+        parent::__construct($page);
+    }
+}
+
 class ListOfArticlesByTagProvider extends ListOfArticlesProvider
 {
     private $article_tag;

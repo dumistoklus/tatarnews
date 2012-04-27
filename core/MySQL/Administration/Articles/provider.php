@@ -55,7 +55,7 @@ class ArticlesListManagerProvider
         $this->start = (int)$start;
         $this->limit = (int)$limit;
 
-        $this->sql = "SELECT art.id, art.header, ct.name AS cat_name, art.cat AS cat_id, art.date AS create_date, art.archive_id, CONCAT(na.number, ' (', na.number_total, ')') AS archive_name, ev.article_id IS NOT NULL AS main_event FROM ".PREFIX."articles art
+        $this->sql = "SELECT art.id, art.header, art.third_col, ct.name AS cat_name, art.cat AS cat_id, art.date AS create_date, art.archive_id, CONCAT(na.number, ' (', na.number_total, ')') AS archive_name, ev.article_id IS NOT NULL AS main_event FROM ".PREFIX."articles art
                         LEFT JOIN ".PREFIX."cats ct ON ct.id = art.cat
                         LEFT JOIN ".PREFIX."newspaper_archive na ON na.id = art.archive_id
                         LEFT JOIN ".PREFIX."main_event ev ON ev.article_id = art.id ORDER BY art.id DESC LIMIT ".$this->start.", ".$this->limit;
@@ -81,7 +81,7 @@ class ArticleContentProvider {
 
     function __construct($aid) {
         $aid = (int)$aid;
-        $this->sql = 'SELECT id, header, preview, content, lid, image, source FROM '.PREFIX.'articles WHERE id = '.$aid.' LIMIT 1';
+        $this->sql = 'SELECT id, header, `date` as create_date, preview, content, lid, image, source FROM '.PREFIX.'articles WHERE id = '.$aid.' LIMIT 1';
     }
 
     function article() {
@@ -98,6 +98,7 @@ class EditArticleProvider {
     private $content;
     private $source;
     private $cat;
+    private $date;
     private $archive;
     private $mainevent;
     private $allValid = true;
@@ -111,7 +112,7 @@ class EditArticleProvider {
 
         if(!$this->allValid && $this->aid < 1) return false;
 
-        $sql = 'UPDATE '.PREFIX.'articles SET image="'.$this->image.'", preview="'.$this->preview.'", header="'.$this->header.'", lid="'.$this->lid.'", content="'.$this->content.'", source="'.$this->source.'", cat='.$this->cat.', archive_id='.$this->archive.' WHERE id='.$this->aid.' LIMIT 1';
+        $sql = 'UPDATE '.PREFIX.'articles SET image="'.$this->image.'", `date`="'.$this->date.'", preview="'.$this->preview.'", header="'.$this->header.'", lid="'.$this->lid.'", content="'.$this->content.'", source="'.$this->source.'", cat='.$this->cat.', archive_id='.$this->archive.' WHERE id='.$this->aid.' LIMIT 1';
         if(!query($sql)) return false;
 
         $allok = true;
@@ -136,6 +137,14 @@ class EditArticleProvider {
     {
         if(is_numeric($archive) && $archive > 0)
             $this->archive = $archive;
+        else
+            $this->allValid = $this->allValid && false;
+    }
+
+    public function setDate($date,$time)
+    {
+        if($date != '' && $time != '')
+            $this->date = strtotime(date('d.m.Y', strtotime($date)).' '.$time);
         else
             $this->allValid = $this->allValid && false;
     }
@@ -206,6 +215,33 @@ class DeleteArticleProvider {
     public function delete_article() {
 
         $sql = 'DELETE FROM ' . PREFIX . 'articles WHERE id IN (' . $this->idString . ')';
+
+        $result = affectedRowsQuery($sql);
+
+        return $result;
+    }
+
+}
+
+class ThirdColProvider {
+
+    private $idString = '';
+
+    public function __construct($ids) {
+
+        if (count($ids) > 0) {
+            foreach ($ids as $id) {
+
+                $idArray[] = (int) $id;
+            }
+
+            $this->idString = implode(' , ', $idArray);
+        }
+    }
+
+    public function setThirdCol() {
+
+        $sql = 'UPDATE ' . PREFIX . 'articles SET third_col = "1" WHERE id IN (' . $this->idString . ')';
 
         $result = affectedRowsQuery($sql);
 
