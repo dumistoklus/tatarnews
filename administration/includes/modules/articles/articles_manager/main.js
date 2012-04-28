@@ -778,10 +778,10 @@ function deleteArticle() {
     var countSelectedArticleItems = ArticlesPanel.selModel.getCount();
 
     if(countSelectedArticleItems == 1) {
-        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранную статью?', confirmThirdCol);
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранную статью?', confirmRemoveLinkedArticle);
     }
     else if(countSelectedArticleItems > 1) {
-        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmThirdCol);
+        Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmRemoveLinkedArticle);
     }
     else {
         Ext.MessageBox.alert('Внимание!', 'Выберите хотя бы одну статью!');
@@ -834,12 +834,12 @@ function removeArticle()
 
 function thirdCol() {
 
-    var countSelectedArticleItems = ArticlesPanel.selModel.getCount();
+    var countSelectedArticleItemsTC = ArticlesPanel.selModel.getCount();
 
-    if(countSelectedArticleItems == 1) {
+    if(countSelectedArticleItemsTC == 1) {
         Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите поместить статью в третью колонку?', confirmThirdCol);
     }
-    else if(countSelectedArticleItems > 1) {
+    else if(countSelectedArticleItemsTC > 1) {
         Ext.MessageBox.confirm('Внимание!', 'Вы уверены, что хотите удалить выбранные статьти?', confirmThirdCol);
     }
     else {
@@ -857,22 +857,22 @@ function confirmThirdCol(answer) {
 
 function setThirdCol()
 {
-    var selectedArticle = ArticlesPanel.selModel.getSelections(),
-        selectedArticleIDs = [],
-        countSelectedArticle = ArticlesPanel.selModel.getCount();
+    var selectedArticleTC = ArticlesPanel.selModel.getSelections(),
+        selectedArticleIDsTC = [],
+        countSelectedArticleTC = ArticlesPanel.selModel.getCount();
 
-    for(var i = 0; i < countSelectedArticle; i++) {
-        selectedArticleIDs.push(selectedArticle[i].json.id);
+    for(var i = 0; i < countSelectedArticleTC; i++) {
+        selectedArticleIDsTC.push(selectedArticleTC[i].json.id);
     }
 
-    selectedArticle = Ext.encode(selectedArticleIDs);
+    selectedArticleTC = Ext.encode(selectedArticleIDsTC);
     Ext.Ajax.request({
 
         waitingMsg: 'Пожалуйста, подождите...',
         url: apiURL,
         params: {
             task: 'THIRD_COL',
-            article_ids: selectedArticle
+            article_ids: selectedArticleTC
         },
         success: function (response) {
             if(response.responseText > 0)
